@@ -19,5 +19,16 @@
     "strictNullChecks": true,
     "target": "ES2018"
   },
-  "include": ["src/*"]
+  "include": [
+    "src/*",
+    "src/toc/*",
+    "src/toc/generators/*",
+    "src/toc/generators/latex/*",
+    "src/toc/generators/markdown/*",
+    "src/toc/generators/notebook/*",
+    "src/toc/generators/notebook/tagstool/*",
+    "src/toc/generators/python/*",
+    "src/toc/utils/*",
+    "src/utils/*"
+  ]
 }

@@ -1,0 +1,47 @@
+{
+  "jupyter.lab.setting-icon": "jupyterlabcodetoc:code-toc-icon",
+  "jupyter.lab.setting-icon-label": "ToC with Code",
+  "title": "ToC with Code",
+  "description": "ToC with code settings.",
+  "jupyter.lab.menus": {
+    "main": [
+      {
+        "id": "jp-mainmenu-view",
+        "items": [
+          {
+            "command": "jupyterlabcodetoc:show-panel",
+            "rank": 4
+          }
+        ]
+      }
+    ],
+    "context": [
+      {
+        "command": "jupyterlabcodetoc:run-cells",
+        "selector": ".jp-tocItem"
+      }
+    ]
+  },
+  "properties": {
+    "numberingH1": {
+      "title": "Enable h1 numbering",
+      "description": "Whether to number first-level headings",
+      "type": "boolean",
+      "default": true
+    },
+    "includeOutput": {
+      "title": "Include cell output in headings",
+      "description": "Whether to include cell output in headings",
+      "type": "boolean",
+      "default": true
+    },
+    "syncCollapseState": {
+      "type": "boolean",
+      "title": "Synchronize collapse state",
+      "description": "If set to true, when a header is collapsed in the table of contents the corresponding section in the notebook is collapsed as well and vice versa.",
+      "default": false
+    }
+  },
+  "additionalProperties": false,
+  "type": "object"
+}

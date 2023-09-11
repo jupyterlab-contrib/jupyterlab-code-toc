@@ -1,0 +1,30 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="671.000000pt" height="619.000000pt" viewBox="0 0 671.000000 619.000000"
+ preserveAspectRatio="xMidYMid meet">
+
+<g transform="translate(0.000000,619.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M50 5855 l0 -265 310 0 310 0 0 265 0 265 -310 0 -310 0 0 -265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M1180 5855 l0 -265 2725 0 2725 0 0 265 0 265 -2725 0 -2725 0 0
+-265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M50 4635 l0 -265 310 0 310 0 0 265 0 265 -310 0 -310 0 0 -265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M1180 4635 l0 -265 1660 0 1660 0 0 265 0 265 -1660 0 -1660 0 0
+-265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M50 3465 l0 -265 310 0 310 0 0 265 0 265 -310 0 -310 0 0 -265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M1170 3465 l0 -265 525 0 525 0 0 265 0 265 -525 0 -525 0 0 -265z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M4337 3013 c-48 -208 -197 -859 -332 -1447 -135 -588 -245 -1073
+-245 -1078 0 -4 73 -8 163 -8 l162 0 329 1438 c182 790 332 1445 334 1455 4
+16 -9 17 -160 17 l-165 0 -86 -377z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M2728 2888 l-788 -431 0 -276 0 -276 73 -39 c39 -22 395 -216 790
+-433 395 -216 721 -393 723 -393 2 0 4 145 4 323 l0 322 -445 244 c-245 135
+-445 247 -445 250 0 3 201 116 445 249 l445 244 0 324 c0 178 -3 324 -7 323
+-5 0 -362 -194 -795 -431z"/>
+<path xmlns="http://www.w3.org/2000/svg" fill="#616161" class="jp-custom-icon jp-icon3 jp-icon-selectable" d="M5040 2998 l1 -323 444 -244 c245 -135 445 -247 445 -250 -1 -3 -200
+-115 -443 -248 l-442 -242 -3 -326 c-1 -201 1 -325 7 -323 5 1 363 196 795
+432 l786 430 0 275 0 276 -123 66 c-67 37 -422 232 -790 433 -367 201 -670
+366 -672 366 -3 0 -5 -145 -5 -322z"/>
+</g>
+</svg>
