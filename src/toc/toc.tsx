@@ -141,11 +141,7 @@ export class TableOfContents extends Widget {
     if (this._current && this._current.generator.itemRenderer) {
       itemRenderer = this._current.generator.itemRenderer!;
     }
-    let jsx = (
-      <div className="jp-TableOfContents">
-        <div className="jp-stack-panel-header">{title}</div>
-      </div>
-    );
+    let jsx;
     if (this._current && this._current.generator) {
       jsx = (
         <TOCTree
@@ -156,6 +152,22 @@ export class TableOfContents extends Widget {
           itemRenderer={itemRenderer}
           toolbar={this._toolbar}
         />
+      );
+    } else {
+      jsx = (
+        <div className="jp-TableOfContents">
+          <div className="jp-stack-panel-header">{title}</div>
+          <div></div>
+          <div className="jpcodetoc-TableOfContents-placeholder">
+            <div className="jpcodetoc-TableOfContents-placeholderContent">
+              <h3>No Widget Selected</h3>
+              <p>
+                Open a notebook, or a file (Markdown, Python or LaTeX) to see
+                its table of contents.
+              </p>
+            </div>
+          </div>
+        </div>
       );
     }
     ReactDOM.render(jsx, this.node, () => {
