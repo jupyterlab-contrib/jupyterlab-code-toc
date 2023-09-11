@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { INumberedHeading } from '../../tokens';
 import { generateNumbering } from '../../utils/generate_numbering';
 import { INumberingDictionary } from '../../utils/numbering_dictionary';
@@ -33,7 +33,7 @@ function onClick(heading: Element) {
  */
 function getRenderedHeadings(
   node: HTMLElement,
-  sanitizer: ISanitizer,
+  sanitizer: IRenderMime.ISanitizer,
   dict: INumberingDictionary,
   numbering = true,
   numberingH1 = true

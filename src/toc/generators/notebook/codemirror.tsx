@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import * as React from 'react';
 import { INotebookHeading } from '../../tokens';
 import { sanitizerOptions } from '../../utils/sanitizer_options';
@@ -15,7 +15,7 @@ interface IProperties {
   /**
    * HTML sanitizer.
    */
-  sanitizer: ISanitizer;
+  sanitizer: IRenderMime.ISanitizer;
 
   /**
    * Notebook heading.

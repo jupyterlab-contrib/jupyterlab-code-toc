@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { ITranslator, nullTranslator } from '@jupyterlab/translation';
 import { TableOfContents } from '../../toc';
 import { ITableOfContentsRegistry as Registry } from '../../tokens';
@@ -25,7 +25,7 @@ interface IOptions {
   /**
    * HTML sanitizer.
    */
-  sanitizer: ISanitizer;
+  sanitizer: IRenderMime.ISanitizer;
 
   /**
    * The application language translator.
@@ -57,7 +57,7 @@ class OptionsManager implements Registry.IOptionsManager {
   /**
    * HTML sanitizer.
    */
-  readonly sanitizer: ISanitizer;
+  readonly sanitizer: IRenderMime.ISanitizer;
 
   /**
    * Gets/sets ToC generator numbering.

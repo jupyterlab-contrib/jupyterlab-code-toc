@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { IDocumentWidget } from '@jupyterlab/docregistry';
 import { FileEditor, IEditorTracker } from '@jupyterlab/fileeditor';
 import {
@@ -88,7 +88,7 @@ function generate(
 function createMarkdownGenerator(
   tracker: IEditorTracker,
   widget: TableOfContents,
-  sanitizer: ISanitizer,
+  sanitizer: IRenderMime.ISanitizer,
   translator?: ITranslator,
   settings?: ISettingRegistry.ISettings
 ): Registry.IGenerator<IDocumentWidget<FileEditor>> {
@@ -151,7 +151,7 @@ function createMarkdownGenerator(
 function createRenderedMarkdownGenerator(
   tracker: IMarkdownViewerTracker,
   widget: TableOfContents,
-  sanitizer: ISanitizer,
+  sanitizer: IRenderMime.ISanitizer,
   translator?: ITranslator,
   settings?: ISettingRegistry.ISettings
 ): Registry.IGenerator<MarkdownDocument> {

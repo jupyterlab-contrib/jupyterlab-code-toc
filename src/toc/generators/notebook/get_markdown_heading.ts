@@ -34,16 +34,13 @@ function getMarkdownHeadings(
   dict: INumberingDictionary,
   lastLevel: number,
   cellRef: Cell,
-  index: number = -1,
+  index: number,
   isRunning = RunningStatus.Idle
 ): INotebookHeading[] {
   const callback = onClick(0);
   let headings: INotebookHeading[] = [];
-  if (index === -1) {
-    console.warn(
-      'Deprecation warning! index argument will become mandatory in the next version'
-    );
-  }
+  let currentLevel = lastLevel;
+
   for (const line of text.split('\n')) {
     if (line) {
       const heading = parseHeading(line);
@@ -59,10 +56,11 @@ function getMarkdownHeadings(
           isRunning,
           index
         });
+        currentLevel = heading.level;
       } else {
         headings.push({
           text: line,
-          level: lastLevel + 1,
+          level: currentLevel + 1,
           onClick: callback,
           type: 'markdown',
           cellRef: cellRef,

@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { Cell, CodeCell, CodeCellModel, MarkdownCell } from '@jupyterlab/cells';
 import {
   MARKDOWN_HEADING_COLLAPSED,
@@ -47,7 +47,7 @@ import { toolbar } from './toolbar_generator';
 export function createNotebookGenerator(
   tracker: INotebookTracker,
   widget: TableOfContents,
-  sanitizer: ISanitizer,
+  sanitizer: IRenderMime.ISanitizer,
   translator?: ITranslator,
   settings?: ISettingRegistry.ISettings
 ): ITableOfContentsRegistry.IGenerator<NotebookPanel> {
@@ -75,7 +75,7 @@ class NotebookGenerator
   constructor(
     tracker: INotebookTracker,
     widget: TableOfContents,
-    sanitizer: ISanitizer,
+    sanitizer: IRenderMime.ISanitizer,
     translator?: ITranslator,
     settings?: ISettingRegistry.ISettings
   ) {
@@ -370,7 +370,7 @@ class NotebookGenerator
    */
   readonly tracker: INotebookTracker;
 
-  protected readonly sanitizer: ISanitizer;
+  protected readonly sanitizer: IRenderMime.ISanitizer;
   protected readonly widget: TableOfContents;
   private _runningCells: Cell[];
 }

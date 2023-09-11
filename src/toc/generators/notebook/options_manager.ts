@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { INotebookTracker } from '@jupyterlab/notebook';
 import { ITranslator, nullTranslator } from '@jupyterlab/translation';
 import { ISignal, Signal } from '@lumino/signaling';
@@ -34,7 +34,7 @@ interface IOptions {
   /**
    * HTML sanitizer.
    */
-  sanitizer: ISanitizer;
+  sanitizer: IRenderMime.ISanitizer;
 
   /**
    * Tag tool component.
@@ -83,7 +83,7 @@ class OptionsManager implements Registry.IOptionsManager {
   /**
    * HTML sanitizer.
    */
-  readonly sanitizer: ISanitizer;
+  readonly sanitizer: IRenderMime.ISanitizer;
 
   /**
    * Gets/sets the tag tool component.

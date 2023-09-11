@@ -1,7 +1,7 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
-import { ISanitizer } from '@jupyterlab/apputils';
+import { IRenderMime } from '@jupyterlab/rendermime';
 import { Cell } from '@jupyterlab/cells';
 import { generateNumbering } from '../../utils/generate_numbering';
 import { INotebookHeading, RunningStatus } from '../../tokens';
@@ -34,22 +34,18 @@ type onClickFactory = (el: Element) => () => void;
 function getRenderedHTMLHeadings(
   node: HTMLElement,
   onClick: onClickFactory,
-  sanitizer: ISanitizer,
+  sanitizer: IRenderMime.ISanitizer,
   dict: INumberingDictionary,
   lastLevel: number,
   numbering = false,
   numberingH1 = true,
   cellRef: Cell,
-  index: number = -1,
+  index: number,
   isRunning = RunningStatus.Idle
 ): INotebookHeading[] {
   let nodes = node.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+  let currentLevel = lastLevel;
 
-  if (index === -1) {
-    console.warn(
-      'Deprecation warning! index argument will become mandatory in the next version'
-    );
-  }
   let headings: INotebookHeading[] = [];
   for (const el of nodes) {
     if (el.classList.contains('jp-toc-ignore')) {
@@ -60,7 +56,7 @@ function getRenderedHTMLHeadings(
       if (el.innerHTML) {
         let html = sanitizer.sanitize(el.innerHTML, sanitizerOptions);
         headings.push({
-          level: lastLevel + 1,
+          level: currentLevel + 1,
           html: html.replace('¶', ''),
           text: el.textContent ? el.textContent : '',
           onClick: onClick(el),
@@ -83,6 +79,7 @@ function getRenderedHTMLHeadings(
     if (!numberingH1) {
       level -= 1;
     }
+    currentLevel = level;
     let nstr = generateNumbering(dict, level);
     if (numbering) {
       const nhtml = document.createElement('span');

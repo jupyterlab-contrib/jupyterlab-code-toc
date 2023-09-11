@@ -12,8 +12,8 @@ import * as React from 'react';
 import { TableOfContents } from '../..';
 import { INotebookHeading, RunningStatus } from '../../tokens';
 import { sanitizerOptions } from '../../utils/sanitizer_options';
-import { CodeComponent } from './codemirror';
 import { OptionsManager } from './options_manager';
+import { CodeCellComponent } from './codecell';
 
 /**
  * Class name of the toc item list.
@@ -39,10 +39,7 @@ export function render(
   toc: INotebookHeading[] = []
 ): JSX.Element | null {
   if (item.type === 'markdown' || item.type === 'header') {
-    const fontSizeClass =
-      item.type === 'header'
-        ? `toc-level-size-${item.level}`
-        : 'toc-level-size-default';
+    const fontSizeClass = `toc-level-size-${item.level}`;
     const numbering = item.numbering && options.numbering ? item.numbering : '';
     const cellCollapseMetadata = options.syncCollapseState
       ? MARKDOWN_HEADING_COLLAPSED
@@ -109,18 +106,32 @@ export function render(
           </NotebookHeading>
         );
       } else {
-        return header;
+        // markdown
+        return (
+          <div className={'toc-entry-holder ' + fontSizeClass}>
+            <span className={`${item.type}-cell toc-cell-item`}>
+              {numbering + item.text}
+            </span>
+          </div>
+        );
       }
     }
   }
 
   if (options.showCode && item.type === 'code') {
+    // if undefined, display as text
+    const languageMimetype =
+      tracker.currentWidget?.model?.metadata.language_info?.mimetype || 'text';
     // Render code cells:
     return (
       <div className="toc-code-cell-div">
         <div className="toc-code-cell-prompt">{item.prompt}</div>
         <span className={'toc-code-span'}>
-          <CodeComponent sanitizer={options.sanitizer} heading={item} />
+          <CodeCellComponent
+            cellInput={item.text}
+            languageMimetype={languageMimetype}
+          />
+          {/* <CodeComponent sanitizer={options.sanitizer} heading={item} /> */}
         </span>
       </div>
     );

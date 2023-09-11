@@ -1,0 +1,46 @@
+.toc-cell-input .cm-editor {
+  cursor: pointer;
+  font-size: 9px;
+  z-index: 0;
+  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
+  border-radius: 0px;
+  background: var(--jp-cell-editor-background);
+  /* max-width: 100%; */
+  max-height: 38px;
+}
+
+.toc-cell-input .cm-scroller {
+  overflow: hidden;
+}
+
+.toc-code-cell-div {
+  display: inline-flex;
+  flex-grow: 1;
+}
+
+.toc-code-cell-prompt {
+  flex: 0 0 27px;
+  color: var(--jp-cell-prompt-not-active-font-color);
+  opacity: var(--jp-cell-prompt-not-active-opacity);
+  font-family: var(--jp-cell-prompt-font-family);
+  padding: var(--jp-code-padding);
+  padding-right: 0px;
+  padding-left: 0px;
+  letter-spacing: var(--jp-cell-prompt-letter-spacing);
+  line-height: var(--jp-code-line-height);
+  font-size: 8px;
+  border: var(--jp-border-width) solid transparent;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.toc-code-span {
+  width: 100%;
+  overflow: hidden;
+}
