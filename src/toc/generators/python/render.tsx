@@ -12,7 +12,7 @@ import { IHeading } from '../../tokens';
  * @returns rendered item
  */
 function render(item: IHeading): JSX.Element {
-  let fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
+  const fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
 
   return (
     <div className={fontSizeClass + ' jpcodetoc-toc-entry-holder'}>

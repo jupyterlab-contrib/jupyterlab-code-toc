@@ -109,7 +109,7 @@ class TagListComponent extends React.Component<IProperties, IState> {
    * @returns rendered list
    */
   render(): JSX.Element {
-    let tags = this.props.tags;
+    const tags = this.props.tags;
     let jsx = null;
     if (tags) {
       jsx = this.renderTagComponents(tags);

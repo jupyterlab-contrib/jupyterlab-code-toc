@@ -225,7 +225,7 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
       );
 
       let tagDropdown = <div />;
-      let tagToggleIcon = (
+      const tagToggleIcon = (
         <div
           role="text"
           aria-label={this._trans.__('Show Tags Menu')}

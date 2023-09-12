@@ -51,7 +51,7 @@ function toEntries(arr: Array<any>): Array<[any, number]> {
  */
 function isEnabled(editor: IDocumentWidget<FileEditor>) {
   // Only enable this if the editor MIME type matches one of a few LaTeX variants:
-  let mime = editor.content.model.mimeType;
+  const mime = editor.content.model.mimeType;
   return mime === 'text/x-latex' || mime === 'text/x-stex';
 }
 
@@ -70,7 +70,7 @@ function generate(editor: IDocumentWidget<FileEditor>): IHeading[] {
   lines = toEntries(lines);
 
   // Iterate over the lines to get the heading level and text for each line:
-  let headings: IHeading[] = [];
+  const headings: IHeading[] = [];
   for (let i = 0; i < lines.length; i++) {
     const RE = /^\s*\\(section|subsection|subsubsection){(.+)}/;
     const match = lines[i][0].match(RE);

@@ -62,7 +62,7 @@ export function render(
       );
 
       if (item.type === 'header') {
-        let button = (
+        const button = (
           <div
             className="jp-Collapser p-Widget lm-Widget"
             onClick={(event: any) => {
@@ -78,7 +78,7 @@ export function render(
           cellCollapseMetadata
         ) as boolean;
 
-        let ellipseButton = collapsed ? (
+        const ellipseButton = collapsed ? (
           <div
             className="jpcodetoc-toc-Ellipses"
             onClick={(event: any) => {
@@ -154,7 +154,7 @@ export function render(
     heading?: INotebookHeading
   ) {
     let collapsed = false;
-    let syncCollapseState = options.syncCollapseState;
+    const syncCollapseState = options.syncCollapseState;
     if (heading!.cellRef!.model.getMetadata(cellCollapseMetadata)) {
       collapsed = heading!.cellRef!.model.getMetadata(
         cellCollapseMetadata
@@ -203,17 +203,17 @@ function previousHeader(
   toc: INotebookHeading[]
 ) {
   if (item.index > -1 || toc?.length) {
-    let activeCellIndex = tracker.currentWidget!.content.activeCellIndex;
-    let headerIndex = item.index;
+    const activeCellIndex = tracker.currentWidget!.content.activeCellIndex;
+    const headerIndex = item.index;
     // header index has to be less than the active cell index
     if (headerIndex < activeCellIndex) {
-      let tocIndexOfNextHeader = toc.indexOf(item) + 1;
+      const tocIndexOfNextHeader = toc.indexOf(item) + 1;
       // return true if header is the last header
       if (tocIndexOfNextHeader >= toc.length) {
         return true;
       }
       // return true if the next header cells index is greater than the active cells index
-      let nextHeaderIndex = toc?.[tocIndexOfNextHeader].index;
+      const nextHeaderIndex = toc?.[tocIndexOfNextHeader].index;
       if (nextHeaderIndex > activeCellIndex) {
         return true;
       }

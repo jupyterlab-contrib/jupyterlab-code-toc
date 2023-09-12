@@ -66,7 +66,7 @@ class TOCItem extends React.Component<IProperties, IState> {
       heading.onClick();
     };
 
-    let content = this.props.itemRenderer(heading, toc);
+    const content = this.props.itemRenderer(heading, toc);
     if (!content) {
       return null;
     }

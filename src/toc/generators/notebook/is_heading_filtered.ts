@@ -16,10 +16,10 @@ function isHeadingFiltered(heading: INotebookHeading, tags: string[]): boolean {
     return false;
   }
   if (heading && heading.cellRef) {
-    let ctags = heading.cellRef.model.getMetadata('tags') as string[];
+    const ctags = heading.cellRef.model.getMetadata('tags') as string[];
     if (ctags) {
       for (let j = 0; j < ctags.length; j++) {
-        let name = ctags[j];
+        const name = ctags[j];
         for (let k = 0; k < tags.length; k++) {
           if (tags[k] === name) {
             return false;

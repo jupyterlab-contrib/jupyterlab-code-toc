@@ -15,15 +15,15 @@ import { OptionsManager } from './options_manager';
  * @returns rendered item
  */
 function render(options: OptionsManager, item: INumberedHeading): JSX.Element {
-  let fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
+  const fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
 
   // Render item numbering:
-  let numbering = item.numbering && options.numbering ? item.numbering : '';
+  const numbering = item.numbering && options.numbering ? item.numbering : '';
 
   // Render the item:
   let jsx;
   if (item.html) {
-    let html = options.sanitizer.sanitize(item.html, sanitizerOptions);
+    const html = options.sanitizer.sanitize(item.html, sanitizerOptions);
     jsx = (
       <span
         dangerouslySetInnerHTML={{ __html: numbering + html }}

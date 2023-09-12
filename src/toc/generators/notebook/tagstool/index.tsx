@@ -84,13 +84,13 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
    * @param add - boolean indicating whether to add to selection
    */
   changeSelectionState = (newState: string, add: boolean): void => {
-    let tags = this.state.selected;
+    const tags = this.state.selected;
     if (add) {
       tags.push(newState);
       this.setState({ selected: tags });
       this.filterTags(tags);
     } else {
-      let selected: string[] = [];
+      const selected: string[] = [];
       for (let i = 0; i < tags.length; i++) {
         if (tags[i] !== newState) {
           selected.push(tags[i]);
@@ -129,7 +129,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
     if (cell === null) {
       return false;
     }
-    let tagList = cell.model.getMetadata('tags') as string[];
+    const tagList = cell.model.getMetadata('tags') as string[];
     if (tagList) {
       for (let i = 0; i < tagList.length; i++) {
         if (tagList[i] === tag) {
@@ -182,7 +182,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
    * Updates filters.
    */
   updateFilters = (): void => {
-    let tmp: string[] = [];
+    const tmp: string[] = [];
     let idx = 0;
     let update = false;
     for (let i = 0; i < this.state.selected.length; i++) {

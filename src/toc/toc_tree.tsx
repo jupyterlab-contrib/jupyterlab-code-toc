@@ -67,7 +67,7 @@ class TOCTree extends React.Component<IProperties, IState> {
 
     // Map the heading objects onto a list of JSX elements...
     let i = 0;
-    let list: JSX.Element[] = this.props.toc.map(el => {
+    const list: JSX.Element[] = this.props.toc.map(el => {
       return (
         <TOCItem
           heading={el}

@@ -43,10 +43,10 @@ function getRenderedHTMLHeadings(
   index: number,
   isRunning = RunningStatus.Idle
 ): INotebookHeading[] {
-  let nodes = node.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
+  const nodes = node.querySelectorAll('h1, h2, h3, h4, h5, h6, p');
   let currentLevel = lastLevel;
 
-  let headings: INotebookHeading[] = [];
+  const headings: INotebookHeading[] = [];
   for (const el of nodes) {
     if (el.classList.contains('jp-toc-ignore')) {
       // skip this element if a special class name is included
@@ -54,7 +54,7 @@ function getRenderedHTMLHeadings(
     }
     if (el.nodeName.toLowerCase() === 'p') {
       if (el.innerHTML) {
-        let html = sanitizer.sanitize(el.innerHTML, sanitizerOptions);
+        const html = sanitizer.sanitize(el.innerHTML, sanitizerOptions);
         headings.push({
           level: currentLevel + 1,
           html: html.replace('¶', ''),
@@ -80,7 +80,7 @@ function getRenderedHTMLHeadings(
       level -= 1;
     }
     currentLevel = level;
-    let nstr = generateNumbering(dict, level);
+    const nstr = generateNumbering(dict, level);
     if (numbering) {
       const nhtml = document.createElement('span');
       nhtml.classList.add('jpcodetoc-numbering-entry');

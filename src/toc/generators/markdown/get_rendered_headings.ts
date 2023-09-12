@@ -38,13 +38,13 @@ function getRenderedHeadings(
   numbering = true,
   numberingH1 = true
 ): INumberedHeading[] {
-  let nodes = node.querySelectorAll('h1, h2, h3, h4, h5, h6');
-  let headings: INumberedHeading[] = [];
+  const nodes = node.querySelectorAll('h1, h2, h3, h4, h5, h6');
+  const headings: INumberedHeading[] = [];
   for (let i = 0; i < nodes.length; i++) {
     const heading = nodes[i];
     let level = parseInt(heading.tagName[1], 10);
-    let text = heading.textContent ? heading.textContent : '';
-    let hide = !numbering;
+    const text = heading.textContent ? heading.textContent : '';
+    const hide = !numbering;
 
     // Show/hide numbering DOM element based on user settings:
     if (
@@ -61,7 +61,7 @@ function getRenderedHeadings(
     if (!numberingH1) {
       level -= 1;
     }
-    let nstr = generateNumbering(dict, level);
+    const nstr = generateNumbering(dict, level);
     // Generate the numbering DOM element:
     let nhtml = '';
     if (!hide) {

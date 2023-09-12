@@ -75,7 +75,7 @@ class OptionsManager implements Registry.IOptionsManager {
    * Gets/sets ToC generator numbering h1 headers.
    */
   set numberingH1(value: boolean) {
-    if (this._numberingH1 != value) {
+    if (this._numberingH1 !== value) {
       this._numberingH1 = value;
       this._widget.update();
     }

@@ -15,13 +15,15 @@ import { render } from './render';
  */
 function generate(editor: IDocumentWidget<FileEditor>): IHeading[] {
   // Split the text into lines:
-  let lines = editor.content.model.sharedModel.source.split('\n') as Array<any>;
+  const lines = editor.content.model.sharedModel.source.split(
+    '\n'
+  ) as Array<any>;
 
   // Iterate over the lines to get the heading level and text for each line:
-  let headings: IHeading[] = [];
+  const headings: IHeading[] = [];
   let processingImports = false;
   for (let i = 0; i < lines.length; i++) {
-    let line = lines[i].trim();
+    const line = lines[i].trim();
     if (line.indexOf('def ') === 0) {
       processingImports = false;
       headings.push({
@@ -36,7 +38,7 @@ function generate(editor: IDocumentWidget<FileEditor>): IHeading[] {
         level: 1,
         onClick: onClick(i)
       });
-    } else if (line.indexOf('import ') == 0 && !processingImports) {
+    } else if (line.indexOf('import ') === 0 && !processingImports) {
       processingImports = true;
       headings.push({
         text: line,
@@ -72,7 +74,7 @@ function generate(editor: IDocumentWidget<FileEditor>): IHeading[] {
  * @returns boolean indicating whether this ToC generator is enabled
  */
 function isEnabled(editor: IDocumentWidget<FileEditor>) {
-  let mime = editor.content.model.mimeType;
+  const mime = editor.content.model.mimeType;
   return mime === 'application/x-python-code' || mime === 'text/x-python';
 }
 

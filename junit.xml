@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="0" errors="0" time="15.212">
+  <testsuite name="jupyterlabcodetoc" errors="0" failures="0" skipped="0" timestamp="2023-09-12T09:37:34" time="7.313" tests="1">
+    <testcase classname="jupyterlabcodetoc should be tested" name="jupyterlabcodetoc should be tested" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>

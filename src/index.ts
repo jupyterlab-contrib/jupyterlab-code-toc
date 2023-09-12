@@ -90,7 +90,7 @@ async function activateTOC(
       }
 
       const panel = notebookTracker.currentWidget;
-      if (panel == null) {
+      if (panel === null) {
         return;
       }
 
@@ -102,7 +102,7 @@ async function activateTOC(
       const activeCell = (toc.activeEntry as INotebookHeading).cellRef;
 
       if (activeCell instanceof MarkdownCell) {
-        let level = activeCell.headingInfo.level;
+        const level = activeCell.headingInfo.level;
         for (let i = cells.indexOf(activeCell) + 1; i < cells.length; i++) {
           const cell = cells[i];
           if (
@@ -207,11 +207,11 @@ async function activateTOC(
    * @private
    */
   function onConnect() {
-    let widget = app.shell.currentWidget;
+    const widget = app.shell.currentWidget;
     if (!widget) {
       return;
     }
-    let generator = registry.find(widget);
+    const generator = registry.find(widget);
     if (!generator) {
       // If the previously used widget is still available, stick with it.
       // Otherwise, set the current ToC widget to null.

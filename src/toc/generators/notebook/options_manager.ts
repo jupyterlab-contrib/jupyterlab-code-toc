@@ -100,7 +100,7 @@ class OptionsManager implements Registry.IOptionsManager {
    * Sets notebook meta data.
    */
   set notebookMetadata(value: [string, any]) {
-    if (this._notebook.currentWidget != null) {
+    if (this._notebook.currentWidget !== null) {
       this._notebook.currentWidget.model!.setMetadata(value[0], value[1]);
     }
   }
@@ -122,7 +122,7 @@ class OptionsManager implements Registry.IOptionsManager {
    * Gets/sets ToC generator numbering h1 headers.
    */
   set numberingH1(value: boolean) {
-    if (this._numberingH1 != value) {
+    if (this._numberingH1 !== value) {
       this._numberingH1 = value;
       this._widget.update();
     }
@@ -136,7 +136,7 @@ class OptionsManager implements Registry.IOptionsManager {
    * Toggles whether cell outputs should be included in headings.
    */
   set includeOutput(value: boolean) {
-    if (this._includeOutput != value) {
+    if (this._includeOutput !== value) {
       this._includeOutput = value;
       this._widget.update();
     }
@@ -149,7 +149,7 @@ class OptionsManager implements Registry.IOptionsManager {
    * Gets/sets option for ToC heading collapsing to be reflected in Notebook and vice versa
    */
   set syncCollapseState(value: boolean) {
-    if (this._syncCollapseState != value) {
+    if (this._syncCollapseState !== value) {
       this._syncCollapseState = value;
       this._widget.update();
     }

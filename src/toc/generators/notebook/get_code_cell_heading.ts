@@ -34,7 +34,7 @@ function getCodeCellHeading(
   index: number,
   isRunning = RunningStatus.Idle
 ): INotebookHeading {
-  let headings: INotebookHeading[] = [];
+  const headings: INotebookHeading[] = [];
 
   if (text) {
     const lines = text.split('\n');

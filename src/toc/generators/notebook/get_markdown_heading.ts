@@ -38,7 +38,7 @@ function getMarkdownHeadings(
   isRunning = RunningStatus.Idle
 ): INotebookHeading[] {
   const callback = onClick(0);
-  let headings: INotebookHeading[] = [];
+  const headings: INotebookHeading[] = [];
   let currentLevel = lastLevel;
 
   for (const line of text.split('\n')) {

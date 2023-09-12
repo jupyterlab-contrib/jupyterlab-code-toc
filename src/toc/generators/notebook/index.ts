@@ -171,16 +171,16 @@ class NotebookGenerator
   generate(panel: NotebookPanel): INotebookHeading[] {
     let headings: INotebookHeading[] = [];
     let collapseLevel = -1;
-    let dict = {};
+    const dict = {};
 
     // Initialize a variable for keeping track of the previous heading:
     let prev: INotebookHeading | null = null;
 
     // Generate headings by iterating through all notebook cells...
     for (let i = 0; i < panel.content.widgets.length; i++) {
-      let cell: Cell = panel.content.widgets[i];
-      let model = cell.model;
-      let cellCollapseMetadata = this.options.syncCollapseState
+      const cell: Cell = panel.content.widgets[i];
+      const model = cell.model;
+      const cellCollapseMetadata = this.options.syncCollapseState
         ? MARKDOWN_HEADING_COLLAPSED
         : UNSYNC_MARKDOWN_HEADING_COLLAPSED;
       const collapsed =
@@ -206,8 +206,8 @@ class NotebookGenerator
               | null;
             const executionIndicator =
               count ?? (isRunning !== RunningStatus.Idle ? '*' : ' ');
-            let executionCount = `[${executionIndicator}]: `;
-            let heading = getCodeCellHeading(
+            const executionCount = `[${executionIndicator}]: `;
+            const heading = getCodeCellHeading(
               (model as CodeCellModel).sharedModel.source,
               onClick,
               executionCount,
@@ -241,7 +241,7 @@ class NotebookGenerator
                   el.scrollIntoView();
                 };
               };
-              let htmlHeadings = getRenderedHTMLHeadings(
+              const htmlHeadings = getRenderedHTMLHeadings(
                 (cell as CodeCell).outputArea.widgets[j].node,
                 onClick,
                 this.sanitizer,
@@ -271,9 +271,9 @@ class NotebookGenerator
           break;
         }
         case 'markdown': {
-          let mcell = cell as MarkdownCell;
+          const mcell = cell as MarkdownCell;
           let heading: INotebookHeading | undefined;
-          let lastLevel = getLastHeadingLevel(headings);
+          const lastLevel = getLastHeadingLevel(headings);
 
           // If the cell is rendered, generate the ToC items from the HTML...
           if (mcell.rendered && !mcell.inputHidden) {

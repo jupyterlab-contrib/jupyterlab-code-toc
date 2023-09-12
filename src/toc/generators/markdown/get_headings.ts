@@ -35,7 +35,7 @@ function getHeadings(
   const lines = text.split('\n');
 
   // Iterate over the lines to get the header level and text for each line:
-  let headings: INumberedHeading[] = [];
+  const headings: INumberedHeading[] = [];
   let FLG;
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];

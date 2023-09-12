@@ -46,7 +46,7 @@ function generate(
   editor: IDocumentWidget<FileEditor>,
   options?: OptionsManager
 ): INumberedHeading[] {
-  let dict = {};
+  const dict = {};
   let numberingH1 = true;
   if (options !== undefined) {
     numberingH1 = options.numberingH1;
@@ -208,7 +208,7 @@ function createRenderedMarkdownGenerator(
    * @returns a list of headings
    */
   function generate(widget: MarkdownDocument): INumberedHeading[] {
-    let dict = {};
+    const dict = {};
     return getRenderedHeadings(
       widget.content.node,
       sanitizer,
