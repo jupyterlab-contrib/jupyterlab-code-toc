@@ -1,6 +1,6 @@
 {
     "name": "jupyterlabcodetoc",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "JupyterLab Table of Contents extension that includes code cells and markdown content other than headings.",
     "keywords": [
         "jupyter",
