@@ -65,8 +65,8 @@ function toolbar(options: OptionsManager) {
           title={this._trans.__('Toggle Auto-Numbering')}
           className={
             this.state.numbering
-              ? 'toc-toolbar-icon-selected'
-              : 'toc-toolbar-icon'
+              ? 'jpcodetoc-toc-toolbar-icon-selected'
+              : 'jpcodetoc-toc-toolbar-icon'
           }
         >
           <numberingIcon.react />
@@ -74,7 +74,7 @@ function toolbar(options: OptionsManager) {
       );
       return (
         <div>
-          <div className={'toc-toolbar'}>{icon}</div>
+          <div className={'jpcodetoc-toc-toolbar'}>{icon}</div>
         </div>
       );
     }

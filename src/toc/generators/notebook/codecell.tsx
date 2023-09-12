@@ -53,7 +53,7 @@ const CodeCellComponent: React.FC<IProperties> = props => {
     }
   }, [props.cellInput, props.languageMimetype]);
 
-  return <div ref={containerRef} className="toc-cell-input" />;
+  return <div ref={containerRef} className="jpcodetoc-toc-cell-input" />;
 };
 
 /**

@@ -15,7 +15,7 @@ import { OptionsManager } from './options_manager';
  * @returns rendered item
  */
 function render(options: OptionsManager, item: INumberedHeading): JSX.Element {
-  let fontSizeClass = 'toc-level-size-' + item.level;
+  let fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
 
   // Render item numbering:
   let numbering = item.numbering && options.numbering ? item.numbering : '';

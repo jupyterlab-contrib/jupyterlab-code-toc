@@ -82,8 +82,8 @@ class TagListComponent extends React.Component<IProperties, IState> {
     return tags.map((tag, index) => {
       const tagClass =
         selectedTags.indexOf(tag) >= 0
-          ? 'toc-selected-tag toc-tag'
-          : 'toc-unselected-tag toc-tag';
+          ? 'jpcodetoc-toc-selected-tag jpcodetoc-toc-tag'
+          : 'jpcodetoc-toc-unselected-tag jpcodetoc-toc-tag';
       return (
         <div
           key={tag}
@@ -114,7 +114,7 @@ class TagListComponent extends React.Component<IProperties, IState> {
     if (tags) {
       jsx = this.renderTagComponents(tags);
     }
-    return <div className="toc-tag-holder">{jsx}</div>;
+    return <div className="jpcodetoc-toc-tag-holder">{jsx}</div>;
   }
 }
 

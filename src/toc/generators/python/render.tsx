@@ -12,14 +12,14 @@ import { IHeading } from '../../tokens';
  * @returns rendered item
  */
 function render(item: IHeading): JSX.Element {
-  let fontSizeClass = 'toc-level-size-' + item.level;
+  let fontSizeClass = 'jpcodetoc-toc-level-size-' + item.level;
 
   return (
-    <div className={fontSizeClass + ' toc-entry-holder'}>
+    <div className={fontSizeClass + ' jpcodetoc-toc-entry-holder'}>
       <div className="jp-Collapser p-Widget lm-Widget">
-        <div className="toc-Collapser-child"></div>
+        <div className="jpcodetoc-toc-Collapser-child"></div>
       </div>
-      <span className="header-cell toc-cell-item"> {item.text} </span>
+      <span className="header-cell jpcodetoc-toc-cell-item"> {item.text} </span>
     </div>
   );
 }

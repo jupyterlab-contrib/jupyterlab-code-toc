@@ -155,8 +155,8 @@ export class TableOfContents extends Widget {
       );
     } else {
       jsx = (
-        <div className="jp-TableOfContents">
-          <div className="jp-stack-panel-header">{title}</div>
+        <div className="jpcodetoc-TableOfContents">
+          <div className="jpcodetoc-stack-panel-header">{title}</div>
           <div></div>
           <div className="jpcodetoc-TableOfContents-placeholder">
             <div className="jpcodetoc-TableOfContents-placeholderContent">

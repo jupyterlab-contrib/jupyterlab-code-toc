@@ -20,7 +20,7 @@ import { CodeCellComponent } from './codecell';
  *
  * @private
  */
-const TOC_TREE_CLASS = 'jp-TableOfContents-content';
+const TOC_TREE_CLASS = 'jpcodetoc-TableOfContents-content';
 
 /**
  * Renders a notebook table of contents item.
@@ -39,7 +39,7 @@ export function render(
   toc: INotebookHeading[] = []
 ): JSX.Element | null {
   if (item.type === 'markdown' || item.type === 'header') {
-    const fontSizeClass = `toc-level-size-${item.level}`;
+    const fontSizeClass = `jpcodetoc-toc-level-size-${item.level}`;
     const numbering = item.numbering && options.numbering ? item.numbering : '';
     const cellCollapseMetadata = options.syncCollapseState
       ? MARKDOWN_HEADING_COLLAPSED
@@ -53,10 +53,10 @@ export function render(
               numbering +
               options.sanitizer.sanitize(item.html, sanitizerOptions)
           }}
-          className={`${item.type}-cell toc-cell-item`}
+          className={`${item.type}-cell jpcodetoc-toc-cell-item`}
         />
       ) : (
-        <span className={`${item.type}-cell toc-cell-item`}>
+        <span className={`${item.type}-cell jpcodetoc-toc-cell-item`}>
           {numbering + item.text}
         </span>
       );
@@ -70,7 +70,7 @@ export function render(
               onClick(tracker, cellCollapseMetadata, item);
             }}
           >
-            <div className="toc-Collapser-child" />
+            <div className="jpcodetoc-toc-Collapser-child" />
           </div>
         );
 
@@ -80,7 +80,7 @@ export function render(
 
         let ellipseButton = collapsed ? (
           <div
-            className="toc-Ellipses"
+            className="jpcodetoc-toc-Ellipses"
             onClick={(event: any) => {
               event.stopPropagation();
               onClick(tracker, cellCollapseMetadata, item);
@@ -96,7 +96,7 @@ export function render(
               tracker.activeCell === item.cellRef ||
               previousHeader(tracker, item, toc)
             }
-            className={'toc-entry-holder ' + fontSizeClass}
+            className={'jpcodetoc-toc-entry-holder ' + fontSizeClass}
             isRunning={item.isRunning}
             area={widget.node.querySelector(`.${TOC_TREE_CLASS}`)}
           >
@@ -108,8 +108,8 @@ export function render(
       } else {
         // markdown
         return (
-          <div className={'toc-entry-holder ' + fontSizeClass}>
-            <span className={`${item.type}-cell toc-cell-item`}>
+          <div className={'jpcodetoc-toc-entry-holder ' + fontSizeClass}>
+            <span className={`${item.type}-cell jpcodetoc-toc-cell-item`}>
               {numbering + item.text}
             </span>
           </div>
@@ -124,9 +124,9 @@ export function render(
       tracker.currentWidget?.model?.metadata.language_info?.mimetype || 'text';
     // Render code cells:
     return (
-      <div className="toc-code-cell-div">
-        <div className="toc-code-cell-prompt">{item.prompt}</div>
-        <span className={'toc-code-span'}>
+      <div className="jpcodetoc-toc-code-cell-div">
+        <div className="jpcodetoc-toc-code-cell-prompt">{item.prompt}</div>
+        <span className={'jpcodetoc-toc-code-span'}>
           <CodeCellComponent
             cellInput={item.text}
             languageMimetype={languageMimetype}
@@ -246,7 +246,10 @@ function NotebookHeading(props: NotebookHeadingProps): JSX.Element {
   return (
     <div
       ref={itemRef}
-      className={classes(props.className, isActive ? 'toc-active-cell' : '')}
+      className={classes(
+        props.className,
+        isActive ? 'jpcodetoc-toc-active-cell' : ''
+      )}
       data-running={props.isRunning}
     >
       {props.children}

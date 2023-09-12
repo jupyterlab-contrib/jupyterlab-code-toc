@@ -53,7 +53,10 @@ abstract class TagComponent extends React.Component<IProperties> {
     const tag = this.props.tag as string;
     return (
       <div>
-        <label className="toc-tag-label" key={new Date().toLocaleTimeString()}>
+        <label
+          className="jpcodetoc-toc-tag-label"
+          key={new Date().toLocaleTimeString()}
+        >
           {tag}
         </label>
       </div>

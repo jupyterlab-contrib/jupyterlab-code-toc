@@ -213,21 +213,21 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
    */
   render(): JSX.Element {
     let jsx = (
-      <div className="toc-no-tags-div">
+      <div className="jpcodetoc-toc-no-tags-div">
         {this._trans.__('No Tags Available')}
       </div>
     );
     let text;
     if (this.state.selected.length === 0) {
       text = (
-        <span className={'toc-filter-button-na'}>
+        <span className={'jpcodetoc-toc-filter-button-na'}>
           {this._trans.__('Clear Filters')}
         </span>
       );
     } else if (this.state.selected.length === 1) {
       text = (
         <span
-          className={'toc-filter-button'}
+          className={'jpcodetoc-toc-filter-button'}
           onClick={() => this.deselectAll()}
         >
           {' '}
@@ -237,7 +237,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
     } else {
       text = (
         <span
-          className={'toc-filter-button'}
+          className={'jpcodetoc-toc-filter-button'}
           onClick={() => this.deselectAll()}
         >
           {' '}
@@ -250,7 +250,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
     if (this.state.selected.length === 0) {
       command = (
         <span
-          className={'toc-filter-button-na'}
+          className={'jpcodetoc-toc-filter-button-na'}
           role="text"
           aria-label={this._trans.__('Select All Cells With Current Tags')}
           title={this._trans.__('Select All Cells With Current Tags')}
@@ -261,7 +261,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
     } else {
       command = (
         <span
-          className={'toc-filter-button'}
+          className={'jpcodetoc-toc-filter-button'}
           role="button"
           aria-label={this._trans.__('Select All Cells With Current Tags')}
           title={this._trans.__('Select All Cells With Current Tags')}
@@ -275,7 +275,7 @@ class TagsToolComponent extends React.Component<IProperties, IState> {
 
     if (this.props.tags && this.props.tags.length > 0) {
       jsx = (
-        <div className={'toc-tags-container'}>
+        <div className={'jpcodetoc-toc-tags-container'}>
           <TagListComponent
             tags={this.props.tags}
             selectionStateHandler={this.changeSelectionState}

@@ -79,10 +79,10 @@ class TOCTree extends React.Component<IProperties, IState> {
       );
     });
     return (
-      <div className="jp-TableOfContents">
-        <div className="jp-stack-panel-header">{this.props.title}</div>
+      <div className="jpcodetoc-TableOfContents">
+        <div className="jpcodetoc-stack-panel-header">{this.props.title}</div>
         {Toolbar && <Toolbar />}
-        <ul className="jp-TableOfContents-content">{list}</ul>
+        <ul className="jpcodetoc-TableOfContents-content">{list}</ul>
       </div>
     );
   }

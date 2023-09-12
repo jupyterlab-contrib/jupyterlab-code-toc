@@ -184,8 +184,8 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
           title={this._trans.__('Toggle Code Cells')}
           className={
             this.state.showCode
-              ? 'toc-toolbar-code-icon toc-toolbar-icon-selected'
-              : 'toc-toolbar-code-icon toc-toolbar-icon'
+              ? 'jpcodetoc-toc-toolbar-icon-selected'
+              : 'jpcodetoc-toc-toolbar-icon'
           }
         >
           <codeIcon.react />
@@ -200,8 +200,8 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
           title={this._trans.__('Toggle Markdown Text Cells')}
           className={
             this.state.showMarkdown
-              ? 'toc-toolbar-icon-selected'
-              : 'toc-toolbar-icon'
+              ? 'jpcodetoc-toc-toolbar-icon-selected'
+              : 'jpcodetoc-toc-toolbar-icon'
           }
         >
           <markdownIcon.react />
@@ -216,8 +216,8 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
           title={this._trans.__('Toggle Auto-Numbering')}
           className={
             this.state.numbering
-              ? 'toc-toolbar-icon-selected'
-              : 'toc-toolbar-icon'
+              ? 'jpcodetoc-toc-toolbar-icon-selected'
+              : 'jpcodetoc-toc-toolbar-icon'
           }
         >
           <numberingIcon.react />
@@ -232,8 +232,8 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
           title={this._trans.__('Show Tags Menu')}
           className={
             this.state.showTags
-              ? 'toc-toolbar-icon-selected'
-              : 'toc-toolbar-icon'
+              ? 'jpcodetoc-toc-toolbar-icon-selected'
+              : 'jpcodetoc-toc-toolbar-icon'
           }
         >
           <tagIcon.react />
@@ -252,17 +252,19 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
           />
         );
         options.tagTool = this.tagTool;
-        tagDropdown = <div className={'toc-tag-dropdown'}> {tagTool} </div>;
+        tagDropdown = (
+          <div className={'jpcodetoc-toc-tag-dropdown'}> {tagTool} </div>
+        );
       }
 
       return (
         <div>
-          <div className={'toc-toolbar'}>
+          <div className={'jpcodetoc-toc-toolbar'}>
             {codeToggleIcon}
             {markdownToggleIcon}
             {numberingToggleIcon}
             <div
-              className={'toc-tag-dropdown-button'}
+              className={'jpcodetoc-toc-tag-dropdown-button'}
               onClick={event => this.toggleTagDropdown()}
             >
               {tagToggleIcon}

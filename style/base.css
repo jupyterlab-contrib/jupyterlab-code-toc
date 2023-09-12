@@ -7,7 +7,7 @@
   padding: 40px 15px;
 }
 
-.jp-TableOfContents-content {
+.jpcodetoc-TableOfContents-content {
   flex: 1 1 auto;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@
   background-color: var(--jp-layout-color1);
 }
 
-.jp-TableOfContents-content li {
+.jpcodetoc-TableOfContents-content li {
   display: flex;
   flex-direction: row;
   padding: 4px 12px;
@@ -29,7 +29,7 @@
   padding-bottom: 8px;
 }
 
-.jp-TableOfContents {
+.jpcodetoc-TableOfContents {
   display: flex;
   flex-direction: column;
   background: var(--jp-layout-color1);
@@ -38,7 +38,7 @@
   height: 100%;
 }
 
-.jp-TableOfContents .jp-stack-panel-header {
+.jpcodetoc-TableOfContents .jpcodetoc-stack-panel-header {
   border-bottom: var(--jp-border-width) solid var(--jp-border-color2);
   flex: 0 0 auto;
   font-size: var(--jp-ui-font-size0);
@@ -49,41 +49,8 @@
   text-transform: uppercase;
 }
 
-.jp-TableOfContents-codeContainer {
-  overflow: hidden;
-}
-
-.jp-TableOfContents-code {
-  font-size: 9px;
-  max-height: 70px;
-}
-
-.cm-toc .CodeMirror {
-  font-size: 9px;
-  z-index: 0;
-  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color);
-  border-radius: 0px;
-  background: var(--jp-cell-editor-background);
-  max-width: 100%;
-  max-height: 36px;
-}
-
-.toc-code-span {
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.cm-toc .CodeMirror-scroll {
-  overflow: hidden !important;
-}
-
-.CodeMirror-scroll::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-.toc-toolbar-icon,
-.toc-toolbar-icon-selected {
+.jpcodetoc-toc-toolbar-icon,
+.jpcodetoc-toc-toolbar-icon-selected {
   float: left;
   padding: 0px;
   margin: 4px;
@@ -100,45 +67,23 @@
   border-radius: 2px;
 }
 
-[data-jp-theme-light='true'] .toc-toolbar-icon:hover {
+[data-jp-theme-light='true'] .jpcodetoc-toc-toolbar-icon:hover {
   background-color: var(--jp-input-background);
 }
 
-[data-jp-theme-light='false'] .toc-toolbar-icon:hover {
+[data-jp-theme-light='false'] .jpcodetoc-toc-toolbar-icon:hover {
   background-color: #3a3a3a;
 }
 
-[data-jp-theme-light='true'] .toc-toolbar-icon-selected {
+[data-jp-theme-light='true'] .jpcodetoc-toc-toolbar-icon-selected {
   background-color: var(--jp-layout-color2);
 }
 
-[data-jp-theme-light='false'] .toc-toolbar-icon-selected {
+[data-jp-theme-light='false'] .jpcodetoc-toc-toolbar-icon-selected {
   background-color: #565656;
 }
 
-.toc-code-cell-prompt {
-  flex: 0 0 27px;
-  color: var(--jp-cell-prompt-not-active-font-color);
-  opacity: var(--jp-cell-prompt-not-active-opacity);
-  font-family: var(--jp-cell-prompt-font-family);
-  padding: var(--jp-code-padding);
-  padding-right: 0px;
-  padding-left: 0px;
-  letter-spacing: var(--jp-cell-prompt-letter-spacing);
-  line-height: var(--jp-code-line-height);
-  font-size: 8px;
-  border: var(--jp-border-width) solid transparent;
-  text-align: left;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.toc-toolbar {
+.jpcodetoc-toc-toolbar {
   position: relative;
   width: 100%;
   margin: 0px;
@@ -149,12 +94,7 @@
   align-items: center;
 }
 
-.toc-code-cell-div {
-  display: inline-flex;
-  width: 100%;
-}
-
-.toc-entry-holder {
+.jpcodetoc-toc-entry-holder {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -163,7 +103,7 @@
   overflow: hidden;
 }
 
-.toc-Collapser-child {
+.jpcodetoc-toc-Collapser-child {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -172,110 +112,52 @@
   bottom: 0px;
 }
 
-.toc-entry-holder:hover .toc-Collapser-child {
+.jpcodetoc-toc-entry-holder:hover .jpcodetoc-toc-Collapser-child {
   box-shadow: var(--jp-elevation-z2);
   background: var(--jp-brand-color1);
   opacity: var(--jp-cell-collapser-not-active-hover-opacity);
 }
 
-.toc-active-cell .toc-Collapser-child {
+.jpcodetoc-toc-active-cell .jpcodetoc-toc-Collapser-child {
   background: var(--jp-brand-color1);
 }
 
-.toc-active-cell .toc-Collapser-child:hover {
+.jpcodetoc-toc-active-cell .jpcodetoc-toc-Collapser-child:hover {
   background: var(--jp-brand-color0);
   opacity: 1;
 }
 
-.toc-active-cell:hover .toc-Collapser-child {
+.jpcodetoc-toc-active-cell:hover .jpcodetoc-toc-Collapser-child {
   background: var(--jp-brand-color0);
   opacity: 1;
 }
 
-.toc-Collapser-child {
+.jpcodetoc-toc-Collapser-child {
   background: transparent;
 }
 
-.toc-Collapser-child:hover {
+.jpcodetoc-toc-Collapser-child:hover {
   box-shadow: var(--jp-elevation-z2);
   background: var(--jp-brand-color1);
   opacity: var(--jp-cell-collapser-not-active-hover-opacity);
 }
 
-.toc-twist-placeholder {
-  max-width: 10px;
-  opacity: 0;
-  overflow: hidden;
-}
-
-.cm-toc-plain-span {
-  width: 100%;
-  white-space: pre-wrap;
-  display: block;
-}
-
-.cm-toc-plain-textarea {
-  font-size: 9px;
-  z-index: 0;
-  border: var(--jp-border-width) solid var(--jp-cell-editor-border-color2);
-  border-radius: 0px;
-  background: var(--jp-cell-editor-background);
-  width: calc(100% - 9px);
-  overflow: hidden;
-  max-height: 74px;
-  resize: none;
-  font-family: var(--jp-code-font-family);
-  outline: none;
-  user-select: none;
-  white-space: pre;
-  padding: var(--jp-code-padding);
-}
-
-.cm-toc .CodeMirror-sizer {
-  min-width: 0px !important;
-  min-height: 0px !important;
-  margin-bottom: 0px !important;
-}
-
-.cm-toc .CodeMirror-line {
-  white-space: pre-wrap;
-  cursor: pointer;
-}
-
-.cm-toc .CodeMirror-lines {
-  cursor: pointer;
-}
-
-.toc-tag-dropdown {
+.jpcodetoc-toc-tag-dropdown {
   display: flex;
   width: 100%;
 }
 
-.toc-tag-dropdown-button {
+.jpcodetoc-toc-tag-dropdown-button {
   margin-left: auto;
 }
 
-.toc-tags-container {
+.jpcodetoc-toc-tags-container {
   padding: 4px;
+  width: 100%;
   border-bottom: var(--jp-border-width) solid var(--jp-border-color2);
 }
 
-.toc-clear-button {
-  font-size: 12px;
-  color: var(--jp-ui-font-color1);
-  padding-left: 15px;
-  user-select: none;
-  float: right;
-}
-
-.toc-clear-button:hover {
-  font-size: 12px;
-  color: var(--jp-ui-font-color2);
-  padding-left: 15px;
-  user-select: none;
-}
-
-.toc-filter-button {
+.jpcodetoc-toc-filter-button {
   background-color: var(--jp-layout-color1);
   border: solid 1px var(--jp-layout-color4);
   border-radius: 3px;
@@ -291,13 +173,13 @@
   margin-bottom: 13px;
 }
 
-.toc-filter-button:hover {
+.jpcodetoc-toc-filter-button:hover {
   background-color: var(--jp-layout-color4);
   border: solid 1px var(--jp-layout-color4);
   color: var(--jp-layout-color1);
 }
 
-.toc-filter-button-na {
+.jpcodetoc-toc-filter-button-na {
   background-color: var(--jp-layout-color1);
   border: solid 1px var(--jp-ui-font-color3);
   border-radius: 3px;
@@ -313,7 +195,7 @@
   margin-bottom: 13px;
 }
 
-.toc-no-tags-div {
+.jpcodetoc-toc-no-tags-div {
   font-size: 12px;
   padding: 3px;
   padding-bottom: 6px;
@@ -321,15 +203,7 @@
   color: var(--jp-layout-color4);
 }
 
-.toc-tags-container {
-  width: 100%;
-}
-
-.jp-TableOfContents-content code {
-  font-size: inherit;
-}
-
-.toc-cell-item {
+.jpcodetoc-toc-cell-item {
   padding-left: 10px;
   font-size: var(--jp-ui-font-size1);
   white-space: nowrap;
@@ -339,7 +213,7 @@
 
 /* styles for tags */
 
-.toc-tag-label {
+.jpcodetoc-toc-tag-label {
   font-size: 11px;
   max-width: 100%;
   text-overflow: ellipsis;
@@ -352,7 +226,7 @@
   user-select: none;
 }
 
-.toc-tag {
+.jpcodetoc-toc-tag {
   box-sizing: border-box;
   height: 24px;
   border-radius: 20px;
@@ -364,18 +238,18 @@
   max-width: calc(100% - 25px);
 }
 
-.toc-selected-tag {
+.jpcodetoc-toc-selected-tag {
   color: white;
   background-color: #2196f3;
   outline: none;
 }
 
-.toc-unselected-tag {
+.jpcodetoc-toc-unselected-tag {
   background-color: var(--jp-layout-color2);
   outline: none;
 }
 
-.toc-tag-holder {
+.jpcodetoc-toc-tag-holder {
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
@@ -385,29 +259,29 @@
   padding-top: 6px;
 }
 
-.toc-Ellipses {
+.jpcodetoc-toc-Ellipses {
   height: 16px;
   margin-left: auto;
 }
 
-.toc-Ellipses:hover {
+.jpcodetoc-toc-Ellipses:hover {
   border: 1px solid var(--jp-border-color1);
   box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
   background-color: var(--jp-layout-color0);
 }
 
-.toc-level-size-2 {
+.jpcodetoc-toc-level-size-2 {
   margin-left: 16px;
 }
 
-.toc-level-size-3 {
+.jpcodetoc-toc-level-size-3 {
   margin-left: 36px;
 }
 
-.toc-level-size-4 {
+.jpcodetoc-toc-level-size-4 {
   margin-left: 56px;
 }
 
-.toc-level-size-5 {
+.jpcodetoc-toc-level-size-5 {
   margin-left: 76px;
 }
