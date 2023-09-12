@@ -44,7 +44,7 @@
   font-size: var(--jp-ui-font-size0);
   font-weight: 600;
   letter-spacing: 1px;
-  margin: 0px;
+  margin: 0;
   padding: 8px 12px;
   text-transform: uppercase;
 }
@@ -52,18 +52,17 @@
 .jpcodetoc-toc-toolbar-icon,
 .jpcodetoc-toc-toolbar-icon-selected {
   float: left;
-  padding: 0px;
+  padding: 0;
   margin: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-  background-color: none;
+  background-color: transparent;
   background-size: 100%;
   background-position: center;
   height: 24px;
   width: 24px;
-  margin: 4px;
   border-radius: 2px;
 }
 
@@ -86,7 +85,7 @@
 .jpcodetoc-toc-toolbar {
   position: relative;
   width: 100%;
-  margin: 0px;
+  margin: 0;
   user-select: none;
   border-bottom: var(--jp-border-width) solid var(--jp-border-color2);
   height: 36px;
@@ -98,8 +97,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
 }
 
@@ -108,11 +107,12 @@
   width: 100%;
   box-sizing: border-box;
   position: absolute;
-  top: 0px;
-  bottom: 0px;
+  background: transparent;
+  top: 0;
+  bottom: 0;
 }
 
-.jpcodetoc-toc-entry-holder:hover .jpcodetoc-toc-Collapser-child {
+.jpcodetoc-toc-Collapser-child:hover {
   box-shadow: var(--jp-elevation-z2);
   background: var(--jp-brand-color1);
   opacity: var(--jp-cell-collapser-not-active-hover-opacity);
@@ -120,6 +120,12 @@
 
 .jpcodetoc-toc-active-cell .jpcodetoc-toc-Collapser-child {
   background: var(--jp-brand-color1);
+}
+
+.jpcodetoc-toc-entry-holder:hover .jpcodetoc-toc-Collapser-child {
+  box-shadow: var(--jp-elevation-z2);
+  background: var(--jp-brand-color1);
+  opacity: var(--jp-cell-collapser-not-active-hover-opacity);
 }
 
 .jpcodetoc-toc-active-cell .jpcodetoc-toc-Collapser-child:hover {
@@ -130,16 +136,6 @@
 .jpcodetoc-toc-active-cell:hover .jpcodetoc-toc-Collapser-child {
   background: var(--jp-brand-color0);
   opacity: 1;
-}
-
-.jpcodetoc-toc-Collapser-child {
-  background: transparent;
-}
-
-.jpcodetoc-toc-Collapser-child:hover {
-  box-shadow: var(--jp-elevation-z2);
-  background: var(--jp-brand-color1);
-  opacity: var(--jp-cell-collapser-not-active-hover-opacity);
 }
 
 .jpcodetoc-toc-tag-dropdown {
@@ -224,9 +220,9 @@
   display: inline-block;
   overflow: hidden;
   box-sizing: border-box;
-  padding-top: 0px;
+  padding-top: 0;
   margin-top: -1px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   user-select: none;
 }
 
@@ -257,10 +253,7 @@
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  padding-bottom: 6px;
-  padding-right: 20px;
-  padding-left: 9px;
-  padding-top: 6px;
+  padding: 6px 20px 6px 9px;
 }
 
 .jpcodetoc-toc-Ellipses {
@@ -270,7 +263,8 @@
 
 .jpcodetoc-toc-Ellipses:hover {
   border: 1px solid var(--jp-border-color1);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  box-shadow: 0 0 2px 0 color(0, 0, 0, 25%);
   background-color: var(--jp-layout-color0);
 }
 
