@@ -1,4 +1,4 @@
-# Table of Contents Extension with Code Content
+# Table of Contents Extension with Code & Markdown
 
 [![PyPI version](https://img.shields.io/pypi/v/jupyterlabcodetoc.svg)](https://pypi.org/project/jupyterlabcodetoc/)
 [![Github Actions Status](https://github.com/Rmarieta/jupyterlab-code-toc/workflows/Build/badge.svg)](https://github.com/Rmarieta/jupyterlab-code-toc/actions/workflows/build.yml)
