@@ -211,6 +211,10 @@
   text-overflow: ellipsis;
 }
 
+.jpcodetoc-markdown-cell {
+  font-size: var(--jp-ui-font-size0);
+}
+
 /* styles for tags */
 
 .jpcodetoc-toc-tag-label {

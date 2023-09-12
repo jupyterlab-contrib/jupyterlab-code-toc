@@ -53,10 +53,10 @@ export function render(
               numbering +
               options.sanitizer.sanitize(item.html, sanitizerOptions)
           }}
-          className={`${item.type}-cell jpcodetoc-toc-cell-item`}
+          className={`jpcodetoc-${item.type}-cell jpcodetoc-toc-cell-item`}
         />
       ) : (
-        <span className={`${item.type}-cell jpcodetoc-toc-cell-item`}>
+        <span className={`jpcodetoc-${item.type}-cell jpcodetoc-toc-cell-item`}>
           {numbering + item.text}
         </span>
       );
@@ -109,7 +109,9 @@ export function render(
         // markdown
         return (
           <div className={'jpcodetoc-toc-entry-holder ' + fontSizeClass}>
-            <span className={`${item.type}-cell jpcodetoc-toc-cell-item`}>
+            <span
+              className={`jpcodetoc-${item.type}-cell jpcodetoc-toc-cell-item`}
+            >
               {numbering + item.text}
             </span>
           </div>

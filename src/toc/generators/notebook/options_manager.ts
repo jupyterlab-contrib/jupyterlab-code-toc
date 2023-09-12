@@ -111,7 +111,7 @@ class OptionsManager implements Registry.IOptionsManager {
   set numbering(value: boolean) {
     this._numbering = value;
     this._widget.update();
-    this.notebookMetadata = ['toc-autonumbering', this._numbering];
+    this.notebookMetadata = ['jpcodetoc-autonumbering', this._numbering];
   }
 
   get numbering(): boolean {
@@ -164,7 +164,7 @@ class OptionsManager implements Registry.IOptionsManager {
    */
   set showCode(value: boolean) {
     this._showCode = value;
-    this.notebookMetadata = ['toc-showcode', this._showCode];
+    this.notebookMetadata = ['jpcodetoc-showcode', this._showCode];
     this._widget.update();
   }
 
@@ -177,7 +177,7 @@ class OptionsManager implements Registry.IOptionsManager {
    */
   set showMarkdown(value: boolean) {
     this._showMarkdown = value;
-    this.notebookMetadata = ['toc-showmarkdowntxt', this._showMarkdown];
+    this.notebookMetadata = ['jpcodetoc-showmarkdowntxt', this._showMarkdown];
     this._widget.update();
   }
 
@@ -197,7 +197,7 @@ class OptionsManager implements Registry.IOptionsManager {
    */
   set showTags(value: boolean) {
     this._showTags = value;
-    this.notebookMetadata = ['toc-showtags', this._showTags];
+    this.notebookMetadata = ['jpcodetoc-showtags', this._showTags];
     this._widget.update();
   }
 

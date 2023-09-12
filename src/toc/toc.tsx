@@ -162,8 +162,8 @@ export class TableOfContents extends Widget {
             <div className="jpcodetoc-TableOfContents-placeholderContent">
               <h3>No Widget Selected</h3>
               <p>
-                Open a notebook, or a file (Markdown, Python or LaTeX) to see
-                its table of contents.
+                Open a notebook, or a file (Markdown, Python or LaTeX supported)
+                to see its table of contents.
               </p>
             </div>
           </div>

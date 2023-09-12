@@ -33,7 +33,7 @@ interface IProperties {
  *
  * @private
  */
-abstract class TagComponent extends React.Component<IProperties> {
+class TagComponent extends React.Component<IProperties> {
   /**
    * Returns a React component.
    *

@@ -47,8 +47,12 @@ function getRenderedHeadings(
     let hide = !numbering;
 
     // Show/hide numbering DOM element based on user settings:
-    if (heading.getElementsByClassName('numbering-entry').length > 0) {
-      heading.removeChild(heading.getElementsByClassName('numbering-entry')[0]);
+    if (
+      heading.getElementsByClassName('jpcodetoc-numbering-entry').length > 0
+    ) {
+      heading.removeChild(
+        heading.getElementsByClassName('jpcodetoc-numbering-entry')[0]
+      );
     }
     let html = sanitizer.sanitize(heading.innerHTML, sanitizerOptions);
     html = html.replace('¶', ''); // remove the anchor symbol
@@ -61,7 +65,7 @@ function getRenderedHeadings(
     // Generate the numbering DOM element:
     let nhtml = '';
     if (!hide) {
-      nhtml = '<span class="numbering-entry">' + nstr + '</span>';
+      nhtml = '<span class="jpcodetoc-numbering-entry">' + nstr + '</span>';
     }
     // Append the numbering element to the document:
     heading.innerHTML = nhtml + html;

@@ -83,16 +83,16 @@ function toolbar(options: OptionsManager, tracker: INotebookTracker) {
               options.updateWidget();
             });
             const numbering = tracker.currentWidget.model!.getMetadata(
-              'toc-autonumbering'
+              'jpcodetoc-autonumbering'
             ) as boolean;
             const showCode = tracker.currentWidget.model!.getMetadata(
-              'toc-showcode'
+              'jpcodetoc-showcode'
             ) as boolean;
             const showMarkdown = tracker.currentWidget.model!.getMetadata(
-              'toc-showmarkdowntxt'
+              'jpcodetoc-showmarkdowntxt'
             ) as boolean;
             const showTags = tracker.currentWidget.model!.getMetadata(
-              'toc-showtags'
+              'jpcodetoc-showtags'
             ) as boolean;
             options.initializeOptions(
               numbering || options.numbering,

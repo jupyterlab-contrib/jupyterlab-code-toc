@@ -72,7 +72,7 @@ class TOCItem extends React.Component<IProperties, IState> {
     }
     return (
       <li
-        className="jp-tocItem"
+        className="jpcodetoc-tocItem"
         onClick={onClick}
         onContextMenu={(event: React.SyntheticEvent<HTMLSpanElement>) => {
           this.props.entryClicked?.emit(this);

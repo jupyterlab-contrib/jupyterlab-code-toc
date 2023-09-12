@@ -27,7 +27,7 @@ function render(options: OptionsManager, item: INumberedHeading): JSX.Element {
     jsx = (
       <span
         dangerouslySetInnerHTML={{ __html: numbering + html }}
-        className={'toc-markdown-cell ' + fontSizeClass}
+        className={'jpcodetoc-markdown-cell ' + fontSizeClass}
       />
     );
   } else {

@@ -69,8 +69,8 @@ function getRenderedHTMLHeadings(
       }
       continue;
     }
-    if (el.getElementsByClassName('numbering-entry').length > 0) {
-      el.removeChild(el.getElementsByClassName('numbering-entry')[0]);
+    if (el.getElementsByClassName('jpcodetoc-numbering-entry').length > 0) {
+      el.removeChild(el.getElementsByClassName('jpcodetoc-numbering-entry')[0]);
     }
     let html = sanitizer.sanitize(el.innerHTML, sanitizerOptions);
     html = html.replace('¶', '');
@@ -83,7 +83,7 @@ function getRenderedHTMLHeadings(
     let nstr = generateNumbering(dict, level);
     if (numbering) {
       const nhtml = document.createElement('span');
-      nhtml.classList.add('numbering-entry');
+      nhtml.classList.add('jpcodetoc-numbering-entry');
       nhtml.textContent = nstr ?? '';
       el.insertBefore(nhtml, el.firstChild);
     }

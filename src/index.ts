@@ -76,8 +76,8 @@ async function activateTOC(
 
   // Add the ToC to the left area:
   toc.title.icon = tocIcon;
-  toc.title.caption = trans.__('Table of Contents');
-  toc.id = 'table-of-contents';
+  toc.title.caption = trans.__('Table of Contents with Code');
+  toc.id = 'jpcodetoc-id';
   toc.node.setAttribute('role', 'region');
   toc.node.setAttribute('aria-label', trans.__('Table of Contents section'));
 
@@ -127,7 +127,7 @@ async function activateTOC(
   });
 
   app.commands.addCommand(CommandIDs.showPanel, {
-    label: trans.__('Table of Contents'),
+    label: trans.__('Table of Contents with Code'),
     execute: () => {
       app.shell.activateById(toc.id);
     }

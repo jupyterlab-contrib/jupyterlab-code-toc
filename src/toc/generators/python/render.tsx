@@ -19,7 +19,10 @@ function render(item: IHeading): JSX.Element {
       <div className="jp-Collapser p-Widget lm-Widget">
         <div className="jpcodetoc-toc-Collapser-child"></div>
       </div>
-      <span className="header-cell jpcodetoc-toc-cell-item"> {item.text} </span>
+      <span className="jpcodetoc-header-cell jpcodetoc-toc-cell-item">
+        {' '}
+        {item.text}{' '}
+      </span>
     </div>
   );
 }
