@@ -63,6 +63,8 @@ async function activateTOC(
   notebookTracker?: INotebookTracker,
   settingRegistry?: ISettingRegistry
 ): Promise<ITableOfContentsRegistry> {
+  console.log(`JupyterLab extension ${PLUGIN_ID} is activated!`);
+
   const trans = translator.load('jupyterlab');
   // Create the ToC widget:
   const toc = new TableOfContents({
