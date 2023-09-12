@@ -4,6 +4,12 @@
 
 JupyterLab Table of Contents extension that includes code cells and markdown content other than headings.
 
+## Demonstration
+
+The code cell display can be toggled on/off, and so is the markdown cell content. Table of contents entries can also be filtered by cell metadata tags with the toolbar button on the right.
+
+![demo_gif](https://github.com/Rmarieta/jupyterlab-code-toc/assets/33026272/994ca4b3-b0f5-4d9a-9b55-c6f927ac0206)
+
 ## Requirements
 
 - JupyterLab >= 4.0.0
