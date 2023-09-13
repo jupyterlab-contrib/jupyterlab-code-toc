@@ -1,6 +1,8 @@
-# Table of Contents Extension with Code Content
+# Table of Contents Extension with Code & Markdown
 
-[![Github Actions Status](https://github.com/Rmarieta/jupyterlab-code-toc/workflows/Build/badge.svg)](https://github.com/Rmarieta/jupyterlab-code-toc/actions/workflows/build.yml)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rmarieta/jupyterlab-code-toc/main?urlpath=lab)
+[![PyPI version](https://img.shields.io/pypi/v/jupyterlabcodetoc.svg)](https://pypi.org/project/jupyterlabcodetoc/)
+[![Github Actions Status](https://github.com/Rmarieta/jupyterlab-code-toc/workflows/Build/badge.svg)](https://github.com/Rmarieta/jupyterlab-code-toc/actions/workflows/build.yml)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Rmarieta/jupyterlab-code-toc/main?urlpath=lab)
 
 JupyterLab Table of Contents extension that includes code cells and markdown content other than headings.
 
