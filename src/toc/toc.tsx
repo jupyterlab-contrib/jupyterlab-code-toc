@@ -70,7 +70,15 @@ export class TableOfContents extends Widget {
     ) {
       return;
     }
+    if (this._current) {
+      this._current.widget.disposed.disconnect(this._onWidgetDisposed, this);
+    }
+
     this._current = value;
+
+    if (this._current) {
+      this._current.widget.disposed.connect(this._onWidgetDisposed, this);
+    }
 
     if (this.generator) {
       if (this.generator.toolbarGenerator) {
@@ -101,6 +109,16 @@ export class TableOfContents extends Widget {
     });
     this._monitor.activityStopped.connect(this.update, this);
     this.update();
+  }
+
+  /**
+   * Callback invoked upon widget disposal.
+   *
+   * @param _widget - widget
+   */
+  private _onWidgetDisposed(_widget: Widget) {
+    // when the widget is disposed, dispose from the toc widget (calling the _current setter)
+    this.current = null;
   }
 
   /**
