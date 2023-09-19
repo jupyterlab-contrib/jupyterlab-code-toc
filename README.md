@@ -24,6 +24,8 @@ To install the extension, execute:
 pip install jupyterlabcodetoc
 ```
 
+or type `jupyterlabcodetoc` in the Extension Manager search bar in JupyterLab, click install and reload the page.
+
 ## Uninstall
 
 To remove the extension, execute:
